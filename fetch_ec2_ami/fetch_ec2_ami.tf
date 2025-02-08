@@ -1,6 +1,6 @@
 data "aws_ami" "amazon_ami" {
-  most_recent      = true
-  owners           = ["amazon"]
+  most_recent = true
+  owners      = ["amazon"]
 
   filter {
     name   = "name"
@@ -22,9 +22,9 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.amazon_ami.image_id
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
-  key_name = var.key_name
-  count = 2
-    tags = {
-        Name = "webserver-${count.index}"
-    }
+  key_name      = var.key_name
+  count         = 2
+  tags = {
+    Name = "webserver-${count.index}"
+  }
 }
