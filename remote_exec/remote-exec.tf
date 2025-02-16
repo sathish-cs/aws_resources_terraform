@@ -18,6 +18,7 @@ resource "aws_instance" "devops" {
   ami           = var.ami 
   instance_type = var.instance_type
   key_name      =  aws_key_pair.devops_key.key_name
+  subnet_id     = var.subnet_id
   tags = {
     Name = "DevOps"
   }
