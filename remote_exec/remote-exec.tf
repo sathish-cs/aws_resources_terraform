@@ -27,7 +27,7 @@ resource "aws_instance" "devops" {
     type        = "ssh"
     user        = "ubuntu" #Change user as per your AMI
     private_key = tls_private_key.devops.private_key_pem
-    host        = self.private_ip
+    host        = self.public_ip
   }
 
   provisioner "file" {
