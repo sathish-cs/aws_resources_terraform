@@ -5,6 +5,12 @@ variable "ami" {
   
 }
 
+variable "subnet_id" {
+  description = "The subnet ID to launch the instance in"
+  type        = string
+  default = "subnet-0c2b3adq22fhs3" # Replace with your subnet ID
+  
+}
 variable "instance_type" {
   description = "The type of instance to launch"
   type        = string
