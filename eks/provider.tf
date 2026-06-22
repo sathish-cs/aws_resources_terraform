@@ -9,6 +9,6 @@ terraform {
 }
 
 provider "aws" {
-  profile = "sbx"
+  profile = "sbx" # Change the profile as configured. 
   region  = var.region
 }

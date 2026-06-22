@@ -1,5 +1,6 @@
 module "eks" {
   source                  = "./modules/eks"
+  region                  = "us-east-1"
   cluster_name            = var.cluster_name
   cluster_version         = var.cluster_version
   cluster_type            = var.cluster_type
